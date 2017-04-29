@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title></title>
+<script type="text/javascript" src="/webiopi.js"></script>
+<script type="text/javascript">
+webiopi().ready( function()
+{   // Initialize
+    // webiopi().callMacro( "ChangeLedActive", [1, 0] );
+    // webiopi().callMacro( "ChangeLedActive", [2, 0] );
+    // webiopi().callMacro( "ChangeLedActive", [3, 0] );
+    // webiopi().callMacro( "ChangeSpeed", 5 );
+} );
+
+function onCheckboxLed( led )
+{
+    if( 1 == led )
+    {
+        webiopi().callMacro( "mae", [200] );
+        return;
+    }
+    if( 2 == led )
+    {
+        webiopi().callMacro( "ushiro", [200] );
+        return;
+    }
+}
+
+</script>
+</head>
+<body>
+LED Active :<br>
+LED1<input type="checkbox" name="led1" onclick="onCheckboxLed(1)"><br>
+LED2<input type="checkbox" name="led2" onclick="onCheckboxLed(2)"><br>
+
+</body>
+</html>
