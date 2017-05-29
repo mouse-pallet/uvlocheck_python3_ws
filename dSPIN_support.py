@@ -1,5 +1,5 @@
 import dSPIN as hd
-import wiringpi2 as wp
+import wiringpi as wp
 
 
 def dSPIN_Xfer(data):

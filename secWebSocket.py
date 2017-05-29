@@ -23,7 +23,10 @@ class EchoWebSocket(tornado.websocket.WebSocketHandler):
         self.write_message(u"I accepted ! " )
 
     def on_message(self, message):
-        moter.mae(int(message))
+	if( message >=0):
+        	moter.mae(int(message))
+	if( message < 0):
+		moter.ushiro(int(message))
         self.write_message(u"You said: " + message)
 
 

@@ -1,4 +1,4 @@
-import wiringpi2 as wp
+import wiringpi as wp
 import dSPIN as hd
 import dSPIN_command as com
 import dSPIN_support as sup

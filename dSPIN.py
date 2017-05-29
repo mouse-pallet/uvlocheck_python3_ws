@@ -1,4 +1,4 @@
-import wiringpi2 as wp
+import wiringpi as wp
 import dSPIN_support as sup
 
 dSPIN_RESET = 25
